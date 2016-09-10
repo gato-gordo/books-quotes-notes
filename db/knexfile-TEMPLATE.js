@@ -3,9 +3,15 @@
 module.exports = {
 
   development: {
-    client: 'sqlite3',
+    client: 'postgresql',
     connection: {
-      filename: './vormarz.sqlite3'
+      database: 'vormarz_dev',
+      user: '',
+      password: ''
+    },
+    pool: {
+      min: 0,
+      max: 7
     },
     migrations: {
       tableName: 'knex_migrations'
